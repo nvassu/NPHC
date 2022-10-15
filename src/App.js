@@ -773,7 +773,6 @@ function App() {
                   </Grid>
                 </Grid>
                 {/* Search Wrapper end */}
-
                 <Box sx={{ height: boxHeight, width: "90%" }}>
                   <DataGrid
                     rows={usersData.filterData}
@@ -786,7 +785,6 @@ function App() {
                     disableSelectionOnClick
                   />
                 </Box>
-
                 {/* </CardContent>
                        </Card>    */}
               </Grid>

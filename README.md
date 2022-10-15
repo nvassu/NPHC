@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+This Project is a Simple ReactJS Project which demonstrates the following
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+build an MVP employee salary management webapp to manage employees'salaries by:
+Creating a Component in React
+Communicating between parent and child component
+Using MUI along with React
+Using Basic Routing in React
+The project Template can be used to build bigger projects
 
-## Available Scripts
+The app contains an employee list with the following information:
+id - unique alphanumeric ID assigned by the company.
+username - unique alphanumeric login assigned by the company.
+fullName - possibly non-unique name. May not be in English, so please use UTF-8 encoding.
 
-In the project directory, you can run:
+Live Application URL:
 
-### `npm start`
+https://github.com/nvassu/NPHC.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Prerequisites:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Install create-react-app
+2. Install MUI (@emotion/react, @emotion/styled, @mui/icons-material, @mui/material, @mui/styled-engine-sc, @mui/styles, @mui/x-data-grid, lodash)
 
-### `npm test`
+salary - decimal that is >= 0.00.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Top Level ReadMe on how the assessment is built:
 
-### `npm run build`
+1. The coding assessment is done completely based on the user requirement.
+2. The Given API in the task was not functioning hence created my own and tried to build the applicartion
+3. As the assessment is about the employee salary management and the given design was clean and clear on the requirement i have designed as per the given design.
+4. while building the code itself i have considered certain validations and conditions like:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   1. As per the main Screen must contain a an image and username section on the left.
+      a) Upon clicking the image a popup occurs that helps the user to upload the CSV file of the employee salary details.
+      b) The Uploading is done via a modal
+      c) The modal allows only CSV file
+      d) File size is less than 2MB
+      e) A Success message when file is uploaded successfully is shown
+      f) Error message when there is an error uploading the file is shown
+      g) id and login must be unique and shouldn't be repeated in anther row.
+      h) The whole upload is considered a single transaction. If one or more of the rows fails validation, the entire file is rejected.
+   2. In the center main screen two input fields with minimum and maximum ranges that defines the salary ranges that needs to be considered to display upon clicking search button.
+      a) When the minimum salary and maximum salary is given by the user in the respective fields a search action is done
+      b) The details of the respective employees whose range is in between minimum and maximum range is shown in the table.
+      If the fields are empty then the details of all the employees in the table are been displayed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   3. Under the input filters a table that consist of user details, Edit and delete images respectively.
+      a) Under the main section there is a table and the tabler pagination that helps to display number of rows.
+      b) The table has 5 columns which includes ID, Login, name, salary and action column. All the columns can be sorted in ascending or in descending order
+      c) The action column has edit and delete option. Upon edit a modal popup is been displayed with name, login and salary inputs that can be edited.
+      d) ones the CSV file is uploaded the employee salary details are displayed in the main table.
+      e) If the ID of an employee is already present and the details are same in the current table then the details should be ignored.
+      f) If the ID is same and the details are varying then the details of that perticular ID are Updated in the table
+      g) When there is a New user ID then a new row is created with the new emplyee ID and its respective details
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Note: Since the given API was not working unable to perform CRUD operations.
